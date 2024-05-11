@@ -6,7 +6,7 @@ public class ItemsList : MonoBehaviour
 {
     [SerializeField] private GameObject itemEntryPrefab;
     
-    public void Init(List<Item> items)
+    public void Init(List<Item> items, bool isShop)
     {   
         foreach (Transform child in transform)
         {
@@ -15,7 +15,7 @@ public class ItemsList : MonoBehaviour
         foreach (var item in items)
         {
             var itemEntry = Instantiate(itemEntryPrefab, transform);
-            itemEntry.GetComponent<ItemEntry>().Init(item);
+            itemEntry.GetComponent<ItemEntry>().Init(item, isShop);
         }
     }
 }

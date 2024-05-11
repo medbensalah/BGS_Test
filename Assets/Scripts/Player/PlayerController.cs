@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log("Equip Menu");
+            GetComponent<PlayerMisc>().OnEquipMenu();
         }
     }
 }

@@ -3,10 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class PlayerMisc : MonoBehaviour
 {
     public static PlayerMisc Instance { get; private set; }
+     
+    [SerializeField] private EquipMenuScreen equipMenuScreen;
     public Interactable Interactable { get; set; }
+    
     [SerializeField]
     private CanvasGroup _interactionBubble;
     
@@ -14,6 +19,7 @@ public class PlayerMisc : MonoBehaviour
     private IEnumerator _cr_HideInteractionBubble;
     
     private float animationDuration = 0.2f;
+    private GameObject UICanvas;
 
     private void Awake()
     {
@@ -37,6 +43,7 @@ public class PlayerMisc : MonoBehaviour
 
     private void Start()
     {
+        UICanvas = GameObject.Find("Global").transform.Find("UI").gameObject;
         _cr_ShowInteractionBubble = cr_ShowInteractionBubble();
         _cr_HideInteractionBubble = cr_HideInteractionBubble();
     }
@@ -45,6 +52,13 @@ public class PlayerMisc : MonoBehaviour
     {
         if (Interactable == null) return;
         Interactable.Interact();
+    }
+    
+    public void OnEquipMenu()
+    {
+        //open equip menu
+        EquipMenuScreen ems = Instantiate(equipMenuScreen, UICanvas.transform);
+        ems.Init();
     }
     
     public void ShowInteractionBubble()

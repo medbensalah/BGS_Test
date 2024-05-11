@@ -10,18 +10,19 @@ public class ItemEntry : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _itemName;
     [SerializeField] private TextMeshProUGUI _itemPrice;
     private Item _item;
-    
-    public void Init(Item item)
+
+    public void Init(Item item, bool isShop)
     {
         this._item = item;
         _itemIcon.sprite = item.ItemIcon;
         _itemName.text = item.ItemName;
 
-        _itemPrice.text = item.ItemPrice.ToString();
-        
+        _itemPrice.text = isShop ? item.ItemPrice.ToString() : "Count: " + PlayerData.Instance.Inventory[item].ToString();
+
         GetComponent<Button>().onClick.AddListener(() =>
         {
             ShopScreen.OnSelectItem?.Invoke(_item);
+            EquipMenuScreen.OnSelectItem?.Invoke(_item);
         });
     }
 }

@@ -18,7 +18,6 @@ public enum ItemType
 [Serializable]
 public enum ItemSlot
 {
-    All = -1,
     Head,
     Chest,
     ShouldersLeft,

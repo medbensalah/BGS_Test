@@ -5,27 +5,13 @@ using System.Linq;
 using UnityEngine;
 
 public class PlayerData : MonoBehaviour
-{
-    public enum EquipSlot
-    {
-        Head,
-        Chest,
-        ShouldersLeft,
-        ShouldersRight,
-        ArmsLeft,
-        ArmsRight,
-        GlovesLeft,
-        GlovesRight,
-        Legs,
-        ShoesLeft,
-        ShoesRight
-    }
-    
+{    
     public static PlayerData Instance;
 
     [field: SerializeField] public ulong Money { get; private set; }
     public Dictionary<Item, uint> Inventory { get; private set; } = new Dictionary<Item, uint>();
-    
+    public Dictionary<ItemSlot, Item?> Equipments { get; private set; } = new Dictionary<ItemSlot, Item?>();
+
     [SerializeField] private SpriteRenderer headAnchor;
     [SerializeField] private SpriteRenderer chestAnchor;
     [SerializeField] private SpriteRenderer shouldersLeftAnchor;
@@ -54,6 +40,18 @@ public class PlayerData : MonoBehaviour
             Destroy(gameObject);
         }
         
+        // MOCK DATA
+        //add equipment slots
+        foreach (ItemSlot slot in Enum.GetValues(typeof(ItemSlot)))
+        {
+            Equipments.Add(slot, null);
+        }
+        // add to inventory
+        foreach (Item item in ShopItems_so.shopItems.Take(11))
+        {
+            AddItem(item);
+            EquipItem(item);
+        }
     }
     
     public bool AddMoney(ulong amount)
@@ -104,5 +102,54 @@ public class PlayerData : MonoBehaviour
             return true;
         }
         return false;
+    }
+ 
+    public void EquipItem(Item item)
+    {
+        Equipments[item.ItemSlot] = item;
+        switch (item.ItemSlot)
+        {
+            case ItemSlot.Head:
+                headAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.Chest:
+                chestAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.ShouldersLeft:
+                shouldersLeftAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.ShouldersRight:
+                shouldersRightAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.ArmsLeft:
+                armsLeftAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.ArmsRight:
+                armsRightAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.GlovesLeft:
+                glovesLeftAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.GlovesRight:
+                glovesRightAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.Legs:
+                legsAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.ShoesLeft:
+                shoesLeftAnchor.sprite = item.ItemIcon;
+                break;
+            case ItemSlot.ShoesRight:
+                shoesRightAnchor.sprite = item.ItemIcon;
+                break;
+            default:
+                Debug.LogError("Invalid ItemSlot");
+                break;
+        }
+    }
+    
+    public bool IsEquipped(Item item)
+    {
+        return Equipments.ContainsValue(item);
     }
 }
