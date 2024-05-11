@@ -7,8 +7,10 @@ public class Audio : MonoBehaviour
 {
     public static Audio Instance { get; private set; }
     
-    [SerializeField] private AudioSource _audioSource;
-    [SerializeField] private List<AudioClip> _audioClips = new List<AudioClip>();
+    private AudioSource _audioSource;
+    [SerializeField] public AudioClip _bgm;
+    [SerializeField] public AudioClip _success;
+    [SerializeField] public AudioClip _fail;
     
     private void Awake()
     {
@@ -20,11 +22,19 @@ public class Audio : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        _audioSource = GetComponent<AudioSource>();
+        PlayAudio();
     }
     
-    public void PlayAudio(int index)
+    public void PlayOneShot(AudioClip clip)
     {
-        _audioSource.clip = _audioClips[index];
+        _audioSource.PlayOneShot(clip);
+    }
+    
+    public void PlayAudio()
+    {
+        _audioSource.clip = _bgm;
         _audioSource.Play();
     }
     

@@ -54,7 +54,7 @@ public class ShopDetails : MonoBehaviour
         if (_onDelay) return;
         if (CanBuy(_item))
         {
-            //TODO: play music cue
+            Audio.Instance.PlayOneShot(Audio.Instance._success);
             PlayerData.Instance.RemoveMoney(_item.ItemPrice);
             PlayerData.Instance.AddItem(_item);
             _buyButton.interactable = CanBuy(_item);
@@ -63,7 +63,7 @@ public class ShopDetails : MonoBehaviour
         }
         else
         {
-            //TODO: play music cue
+            Audio.Instance.PlayOneShot(Audio.Instance._fail);
         }
     }
 
@@ -94,7 +94,7 @@ public class ShopDetails : MonoBehaviour
         if (_onDelay) return;
         if (CanSell(_item))
         {
-            //TODO: play music cue
+            Audio.Instance.PlayOneShot(Audio.Instance._success);
             PlayerData.Instance.AddMoney(_item.ItemPrice / 2);
             PlayerData.Instance.RemoveItem(_item);
             _buyButton.interactable = CanBuy(_item);
@@ -103,7 +103,7 @@ public class ShopDetails : MonoBehaviour
         }
         else
         {
-            //TODO: play music cue
+            Audio.Instance.PlayOneShot(Audio.Instance._fail);
         }
     }
 
