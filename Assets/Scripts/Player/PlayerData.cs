@@ -47,7 +47,7 @@ public class PlayerData : MonoBehaviour
             Equipments.Add(slot, null);
         }
         // add to inventory
-        foreach (Item item in ShopItems_so.shopItems.Take(11))
+        foreach (Item item in ShopItems_so.shopItems)
         {
             AddItem(item);
             EquipItem(item);
