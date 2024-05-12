@@ -73,6 +73,56 @@ MonoBehaviour:
     ItemPrice: 200
     ItemType: 0
     ItemSlot: 0
+  - ItemName: Black Shoe R
+    ItemIcon: {fileID: 21300000, guid: add7b98e4870e9d4c8e1dd5e07e3de1c, type: 3}
+    ItemPrice: 20
+    ItemType: 6
+    ItemSlot: 10
+  - ItemName: Black Shoe L
+    ItemIcon: {fileID: 21300000, guid: a366da325a505654e94ff671e63cde89, type: 3}
+    ItemPrice: 20
+    ItemType: 6
+    ItemSlot: 9
+  - ItemName: Crimson Shoulder Armor R
+    ItemIcon: {fileID: 21300000, guid: e4c8d3fb89489fc4684fb809362e237c, type: 3}
+    ItemPrice: 45
+    ItemType: 2
+    ItemSlot: 3
+  - ItemName: Crimson Shoulder Armor L
+    ItemIcon: {fileID: 21300000, guid: b2bfd98da49248e42b93a78607ac257a, type: 3}
+    ItemPrice: 45
+    ItemType: 2
+    ItemSlot: 2
+  - ItemName: Crimson Leg Armor
+    ItemIcon: {fileID: 21300000, guid: b1babcb6ce4ee78478abc5076a6d1b8d, type: 3}
+    ItemPrice: 120
+    ItemType: 5
+    ItemSlot: 8
+  - ItemName: Crimson Chest Armor
+    ItemIcon: {fileID: 21300000, guid: 250530d3e9754ed418009e3d539275b3, type: 3}
+    ItemPrice: 300
+    ItemType: 1
+    ItemSlot: 1
+  - ItemName: Crimson Arms L
+    ItemIcon: {fileID: 21300000, guid: ab59709aadb3a224294b3c3b5c47cc79, type: 3}
+    ItemPrice: 30
+    ItemType: 3
+    ItemSlot: 4
+  - ItemName: Crimson Arms R
+    ItemIcon: {fileID: 21300000, guid: fa66f03a93fcebb418b876e0f4731600, type: 3}
+    ItemPrice: 30
+    ItemType: 3
+    ItemSlot: 5
+  - ItemName: Crimson Gloves R
+    ItemIcon: {fileID: 21300000, guid: 767ae73862a0c7c418959a63daafaae9, type: 3}
+    ItemPrice: 25
+    ItemType: 4
+    ItemSlot: 7
+  - ItemName: Crimson Gloves L
+    ItemIcon: {fileID: 21300000, guid: bbec2f9af2fefd4459cd1f041e6850cf, type: 3}
+    ItemPrice: 25
+    ItemType: 4
+    ItemSlot: 6
   - ItemName: Brown Hood
     ItemIcon: {fileID: 21300000, guid: 468244f274f38f64b85773c7888444b6, type: 3}
     ItemPrice: 60
@@ -98,3 +148,113 @@ MonoBehaviour:
     ItemPrice: 60
     ItemType: 0
     ItemSlot: 0
+  - ItemName: Brown Gloves R
+    ItemIcon: {fileID: 21300000, guid: 0d8396fbd3e20f941b37c1cb7829a2e8, type: 3}
+    ItemPrice: 5
+    ItemType: 4
+    ItemSlot: 7
+  - ItemName: Brown Gloves L
+    ItemIcon: {fileID: 21300000, guid: 661842e23ba86e34abbf52c56c321411, type: 3}
+    ItemPrice: 5
+    ItemType: 4
+    ItemSlot: 6
+  - ItemName: Grey Gloves R
+    ItemIcon: {fileID: 21300000, guid: 342c30774664cc34088bfe173b77c96e, type: 3}
+    ItemPrice: 5
+    ItemType: 4
+    ItemSlot: 7
+  - ItemName: Grey Gloves L
+    ItemIcon: {fileID: 21300000, guid: 574bf96e23209b64eb8fa4c82d71564c, type: 3}
+    ItemPrice: 5
+    ItemType: 4
+    ItemSlot: 6
+  - ItemName: Wooden Arms R
+    ItemIcon: {fileID: 21300000, guid: 5e7415947ce8b1c47ade9a3d811da6cd, type: 3}
+    ItemPrice: 15
+    ItemType: 3
+    ItemSlot: 5
+  - ItemName: Wooden Arms L
+    ItemIcon: {fileID: 21300000, guid: c100ecf6707adf24083cea1e4063c659, type: 3}
+    ItemPrice: 15
+    ItemType: 3
+    ItemSlot: 4
+  - ItemName: Blue Shoulder R
+    ItemIcon: {fileID: 21300000, guid: aa3c97470a4d5234ea50591a35ff9616, type: 3}
+    ItemPrice: 20
+    ItemType: 2
+    ItemSlot: 3
+  - ItemName: Green Shoulder R
+    ItemIcon: {fileID: 21300000, guid: 57e9977661e6a7246b75c2de487e5bb3, type: 3}
+    ItemPrice: 20
+    ItemType: 2
+    ItemSlot: 3
+  - ItemName: Wooden Shoulder R
+    ItemIcon: {fileID: 21300000, guid: 805906b1206aa944b99385aa2c600d2f, type: 3}
+    ItemPrice: 20
+    ItemType: 2
+    ItemSlot: 3
+  - ItemName: Gray Shoulder R
+    ItemIcon: {fileID: 21300000, guid: 7c0d0c89b736eb54cac31e27a02a92e5, type: 3}
+    ItemPrice: 20
+    ItemType: 2
+    ItemSlot: 3
+  - ItemName: Blue Shoulder L
+    ItemIcon: {fileID: 21300000, guid: 9af6155338c0e8f4ab8f5bb30b4c586e, type: 3}
+    ItemPrice: 20
+    ItemType: 2
+    ItemSlot: 2
+  - ItemName: Green Shoulder L
+    ItemIcon: {fileID: 21300000, guid: a471110b5fe3bcc4caff7ad9ff13d244, type: 3}
+    ItemPrice: 20
+    ItemType: 2
+    ItemSlot: 2
+  - ItemName: Wooden Shoulder L
+    ItemIcon: {fileID: 21300000, guid: 9fe981f3e80b99e429e4399b985d07f4, type: 3}
+    ItemPrice: 20
+    ItemType: 2
+    ItemSlot: 2
+  - ItemName: Gray Shoulder L
+    ItemIcon: {fileID: 21300000, guid: 893fc4b41b56e07479a71d811eee4b4e, type: 3}
+    ItemPrice: 20
+    ItemType: 2
+    ItemSlot: 2
+  - ItemName: Leather Chest Armor
+    ItemIcon: {fileID: 21300000, guid: 215dd6c48c732d744aecd29e7fecbbfa, type: 3}
+    ItemPrice: 60
+    ItemType: 1
+    ItemSlot: 1
+  - ItemName: Green Chest Armor
+    ItemIcon: {fileID: 21300000, guid: 90458a12b047bb84ba77cb7ea81ba457, type: 3}
+    ItemPrice: 60
+    ItemType: 1
+    ItemSlot: 1
+  - ItemName: Blue Chest Armor
+    ItemIcon: {fileID: 21300000, guid: 124013dbba7f284489ac16156c930131, type: 3}
+    ItemPrice: 60
+    ItemType: 1
+    ItemSlot: 1
+  - ItemName: Metal Chest Armor
+    ItemIcon: {fileID: 21300000, guid: 3d9056df586b6024fbc5b9fee2433eef, type: 3}
+    ItemPrice: 60
+    ItemType: 1
+    ItemSlot: 1
+  - ItemName: Leather Legs Armor
+    ItemIcon: {fileID: 21300000, guid: c376d5b80d02ffe4ba89fd03d60ec471, type: 3}
+    ItemPrice: 50
+    ItemType: 5
+    ItemSlot: 8
+  - ItemName: Green Legs Armor
+    ItemIcon: {fileID: 21300000, guid: 27fe921d9d4bdb24eb91cc1e96a04f02, type: 3}
+    ItemPrice: 50
+    ItemType: 5
+    ItemSlot: 8
+  - ItemName: Blue Legs Armor
+    ItemIcon: {fileID: 21300000, guid: 0c6412d95175c2b40bd9a27f7d1fa096, type: 3}
+    ItemPrice: 50
+    ItemType: 5
+    ItemSlot: 8
+  - ItemName: Metal Legs Armor
+    ItemIcon: {fileID: 21300000, guid: 4807dc8cba98f89409729f6aac2945a7, type: 3}
+    ItemPrice: 50
+    ItemType: 5
+    ItemSlot: 8
