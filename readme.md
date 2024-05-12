@@ -3,7 +3,7 @@
 **Space**: Press space near the shopkeeper (as prompted) to open the shop\
 **E**: To open Equip menu\
 
-#Process
+# Process
 -  I was not sure about what type of animation is required for clothing (spritesheet / skeletal / skinned) so I took a look at Little Sim World and seemed like it uses skeletal animation so I proceeded with that.
 -  I started by making a simple player controller.
 -  I thought putting one of your team in the game would be a fun addition so I picked one andproceeded to skinning the sprite and animating it.
